@@ -1,7 +1,7 @@
 # 数据库配置
 DB_CONFIG = {
-    "host": "10.11.150.253",
-    "port": 3306,
+    "host": "10.11.150.127",
+    "port": 3307,
     "database": "ry-vue-py",
     "user": "root",
     "password": "Qwe123!!"
@@ -10,14 +10,20 @@ DB_CONFIG = {
 # 表名
 TABLE_NAME = "ai_interview_resume"
 
+# 题目表名
+QUESTION_TABLE_NAME = "ai_interview_question"
+
 # 静态查询条件
 STATIC_CONDITIONS = {
     "visible": 1,
     "interview_status": 0
 }
 
+# 排除的名字列表
+EXCLUDE_NAMES = ["张三"]
+
 # end_time 字段名（用于动态日期比较：end_time > 今天）
 END_TIME_FIELD = "end_time"
 
 # 基础 URL
-BASE_URL = "https://10.11.150.127:8667/h5-digitalHuman?token="
+BASE_URL = "https://ai-interview.bencom.cn:59443/h5-digitalHuman?token="

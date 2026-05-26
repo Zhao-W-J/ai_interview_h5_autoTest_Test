@@ -1,4 +1,5 @@
 import re
+import random
 
 class InterviewPage:
 
@@ -27,7 +28,9 @@ class InterviewPage:
             "button"
         ).click()
 
-        self.page.wait_for_timeout(50000)
+        # 答题录音：30 秒 -10 分钟随机
+        random_time = random.randint(30000, 600000)
+        self.page.wait_for_timeout(random_time)
 
         self.page.locator(
             "div"
