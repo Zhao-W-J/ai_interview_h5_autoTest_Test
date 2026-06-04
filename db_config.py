@@ -1,7 +1,7 @@
 # 数据库配置
 DB_CONFIG = {
-    "host": "10.11.150.127",
-    "port": 3307,
+    "host": "10.11.150.253",
+    "port": 3306,
     "database": "ry-vue-py",
     "user": "root",
     "password": "Qwe123!!"
@@ -26,4 +26,4 @@ EXCLUDE_NAMES = ["张三"]
 END_TIME_FIELD = "end_time"
 
 # 基础 URL
-BASE_URL = "https://ai-interview.bencom.cn:59443/h5-digitalHuman?token="
+BASE_URL = "https://58.60.153.86:57070/h5-digitalHuman?token="
