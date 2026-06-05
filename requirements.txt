@@ -1,2 +1,2 @@
-playwright
+playwright==1.59.0
 pymysql
