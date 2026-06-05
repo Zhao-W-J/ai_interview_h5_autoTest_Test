@@ -81,7 +81,7 @@ pipeline {
     post {
         always {
             archiveArtifacts artifacts: 'logs/**, screenshots/**, videos/**, traces/**', allowEmptyArchive: true
-            sh 'docker image prune -f'
+            sh 'docker image prune -f || true'
         }
         success { echo '测试通过！' }
         failure { echo '测试失败！检查日志和截图' }
