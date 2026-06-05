@@ -7,6 +7,9 @@ ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PIP_NO_CACHE_DIR=1
 
+# 配置 pip 国内源（清华）
+RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
 # 复制 requirements 并安装依赖
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
