@@ -5,7 +5,8 @@ WORKDIR /app
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    PIP_NO_CACHE_DIR=1
+    PIP_NO_CACHE_DIR=1 \
+    IS_DOCKER=true
 
 # 配置 pip 国内源（清华）
 RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
