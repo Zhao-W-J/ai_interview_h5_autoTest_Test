@@ -4,11 +4,10 @@ FROM python:3.11-slim
 # 设置工作目录
 WORKDIR /app
 
-# 设置环境变量（使用国内镜像下载浏览器）
+# 设置环境变量
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PIP_NO_CACHE_DIR=1 \
-    PLAYWRIGHT_DOWNLOAD_HOST=https://npmmirror.com/mirrors/playwright \
     DB_HOST=10.11.150.253 \
     DB_USER=root \
     DB_PASSWORD=Qwe123!! \
