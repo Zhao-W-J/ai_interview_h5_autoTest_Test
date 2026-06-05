@@ -82,19 +82,17 @@ print(f"找到 {len(interviewees)} 位面试者")
 with sync_playwright() as p:
 
     # 只启动一次浏览器
+    import os
+    is_docker = os.getenv('IS_DOCKER', 'false').lower() == 'true'
+
     browser = p.chromium.launch(
-        executable_path="C:/Users/zwj/AppData/Local/ms-playwright/chromium-1217/chrome-win64/chrome.exe",
-        headless=False,
+        headless=is_docker,  # Docker 环境 headless=True，本地 headless=False
         slow_mo=100,
-
         args=[
-
             # 自动允许权限
             "--use-fake-ui-for-media-stream",
-
             # 使用 fake 设备（必须）
             "--use-fake-device-for-media-stream",
-
             # fake 视频
             r"--use-file-for-fake-video-capture=C:\Users\zwj\daima\ai_interview_h5_autoTest\wav\face.y4m",
 

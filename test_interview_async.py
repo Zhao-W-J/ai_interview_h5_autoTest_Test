@@ -184,10 +184,12 @@ async def main():
     semaphore = asyncio.Semaphore(MAX_CONCURRENCY)
 
     async with async_playwright() as p:
+        import os
+        is_docker = os.getenv('IS_DOCKER', 'false').lower() == 'true'
+
         # 启动浏览器
         browser = await p.chromium.launch(
-            executable_path="C:/Users/zwj/AppData/Local/ms-playwright/chromium-1217/chrome-win64/chrome.exe",
-            headless=False,
+            headless=is_docker,  # Docker 环境 headless=True，本地 headless=False
             slow_mo=300,
             args=[
                 "--use-fake-ui-for-media-stream",
