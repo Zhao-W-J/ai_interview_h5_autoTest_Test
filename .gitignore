@@ -1,0 +1,43 @@
+# 环境变量文件（敏感信息）
+.env
+.env.local
+
+# 日志和截图
+logs/*
+!logs/.gitkeep
+screenshots/*
+!screenshots/.gitkeep
+videos/*
+!videos/.gitkeep
+traces/*
+!traces/.gitkeep
+
+# wav 目录 - 大文件不上传，只保留目录结构
+wav/*.wav
+wav/*.y4m
+wav/*.mp4
+!wav/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.env/
+
+# Playwright
+.ms-playwright/
+playwright-report/
+test-results/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

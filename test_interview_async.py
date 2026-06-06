@@ -123,7 +123,7 @@ async def run_interview(browser, token, phone_tail, question_count, semaphore, i
             await page.goto(
                 url,
                 wait_until="domcontentloaded",
-                timeout=30000
+                timeout=60000
             )
 
             # 页面对象

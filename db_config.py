@@ -26,4 +26,4 @@ EXCLUDE_NAMES = ["张三"]
 END_TIME_FIELD = "end_time"
 
 # 基础 URL
-BASE_URL = "https://58.60.153.86:57070/h5-digitalHuman?token="
+BASE_URL = "https://10.11.150.127:8667/h5-digitalHuman?token="
